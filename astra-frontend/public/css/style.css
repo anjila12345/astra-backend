@@ -1,0 +1,74 @@
+*/html,
+.body {
+    height: 100%
+}
+
+.body {
+    color: #262626;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+    font-family: 'Source Sans Pro', sans-serif
+}
+a {
+    color: #3c8dbc
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #72afd2
+}
+.main-header {   
+    border: none;
+    height: 80px;
+    border-radius: 0;
+    background-color: #0b1c20;
+    
+}
+.main-header .navbar{
+    float: right;
+  margin-top: -40px;
+
+}
+.login{
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;   
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) center center / cover no-repeat;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.login-box{
+    width: 500px;
+    color: rgb(102, 102, 102);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 16px 32px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background: -webkit-linear-gradient(top, rgb(70, 66, 67), rgb(24, 51, 50));
+    padding: 55px 55px 37px;
+    overflow: hidden;
+    border-radius: 10px;
+    border-top: 0px;
+    display: flex;
+    justify-content: center;
+    flex:center;
+}
+.main-footer{
+border:none ;
+background-color: black;
+color: #fff;
+height:80px;
+
+}
+.text-center{
+    padding-top: 30px;
+
+}
