@@ -17,7 +17,7 @@ describe(' Testing of User Schema', () => {
             'lastname':'Tripathi',
             'location':'Nepal',
             'phonenumber':'987456321',
-            'username':'nischal23',
+            'username':'hero',
             'email': 'nischal@gmail.com',
             'password': 'sam00sau35'
         };
@@ -45,7 +45,7 @@ describe(' Testing of User Schema', () => {
     });
 
 it('Testing of User Deletion', async() => {
-    const status = await User.deleteOne({ "_id": "5fd19fc7d29b5d2d34c63fe7" });
+    const status = await User.deleteOne({ "_id": "5fdb3206b583f00ba869fd75" });
     expect(status.ok).toBe(1);
     
 });
