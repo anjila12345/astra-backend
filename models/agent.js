@@ -30,7 +30,7 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
-        default: 'User'
+        default: 'Agent'
     },
     tokens: [{
         token: {
@@ -63,6 +63,6 @@ userSchema.methods.generateAuthToken = async function () {
 
 
 
-const User = mongoose.model('users', userSchema)
+const User = mongoose.model('agent', userSchema)
 
 module.exports = User
