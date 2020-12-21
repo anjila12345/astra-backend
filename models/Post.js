@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const postSchema = new Schema({
-    user: {
-        type: Schema.Types.ObjectId,
+    user_id: {
+        type: mongoose.Schema.ObjectId,
         ref: 'User',
         required: false
     },
-    name: {
+    title: {
         type: String,
         required: true
     },
@@ -31,5 +31,5 @@ const postSchema = new Schema({
     }
 );
 
-var Posts = mongoose.model('Post', postSchema);
+var Posts = mongoose.model('post', postSchema);
 module.exports = Posts;
