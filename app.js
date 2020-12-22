@@ -19,5 +19,7 @@ app.use(express.json())
 app.use(user2Router)
 app.use(agent)
 app.use(post)
+
+
 app.listen("3000");
 console.log('Server runs at http://localhost:' + 3000);
