@@ -48,7 +48,7 @@ exports.getSingleFeed = (function (req, res) {
     })
 })
 
-exports.getAllPost = (function (req, res, next) {
+exports.findAllPost = (function (req, res, next) {
     post.find({})
         .then((user) => {
             res.statusCode = 200;
