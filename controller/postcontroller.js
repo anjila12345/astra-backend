@@ -50,10 +50,10 @@ exports.getSingleFeed = (function (req, res) {
 
 exports.findAllPost = (function (req, res, next) {
     post.find({})
-        .then((user) => {
+        .then((post) => {
             res.statusCode = 200;
             res.setHeader('Content-type', 'applicaiton/json');
-            res.json(users)
+            res.json(post)
         }, (err) => next(err))
         .catch((err) => next(err));
 });
