@@ -13,28 +13,23 @@ afterAll(async () => {
 describe(' Testing of Contact Schema', () => {
     it(' Testing of Adding Contact', () => {
         const post = {
-            'name': 'waiter',
+            'title': 'staff2',
             'description': 'vaccancy forr waiter'
 
         };
 
         return Post.create(post)
             .then((post) => {
-                expect(post.name).toEqual('waiter');
+                expect(post.title).toEqual('staff2');
             });
     });
 });
 it('to test the update bookingbusiness', async () => {
 
-    return Post.findByIdAndUpdate({_id :Object('5fdb3120aedb1403089b8c22')}, {$set : {name:'waiter',description:'vaccancy forr waiter'}})
-  .then((pp)=>{
-    expect(pp.name).toEqual('waiter'),
-    expect(pp.description).toEqual('vaccancy forr waiter')
+    return Post.findByIdAndUpdate({_id :Object('5fe45b60d12db93dd4d218d8')}, {$set : {user_id:'5fe45b60d12db93dd4d218d8',title:'chefmanager',description:'vaccancy forr chef'}})
 
-
-})
 });
 it('Testing of Contact Deletion', async () => {
-    const status = await Post.deleteOne({ "_id": "5fdb31007c116037f821699f" });
+    const status = await Post.deleteOne({ "_id": "5fe4575bc0525234242b2376" });
     expect(status.ok).toBe(1);
 });
