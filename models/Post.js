@@ -3,7 +3,7 @@ const postSchema = new mongoose.Schema({
 
     user_id: {
         type: mongoose.Schema.ObjectId,
-        ref: 'User',
+        ref: 'agent',
         trim: true
     },
     title: {
