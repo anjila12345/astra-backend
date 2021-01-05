@@ -49,6 +49,7 @@ exports.getSingleFeed = (function (req, res) {
 })
 
 
+
 exports.findpost = async (req, res) => {
     post.find().populate('user_id').then(function (findAllpost) {
 
