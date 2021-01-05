@@ -48,12 +48,12 @@ exports.getSingleFeed = (function (req, res) {
     })
 })
 
-exports.findAllPost = (function (req, res, next) {
-    post.find({})
-        .then((post) => {
-            res.statusCode = 200;
-            res.setHeader('Content-type', 'applicaiton/json');
-            res.json(post)
-        }, (err) => next(err))
-        .catch((err) => next(err));
-});
+
+exports.findpost = async (req, res) => {
+    post.find().populate('user_id').then(function (findAllpost) {
+
+        res.send(findAllpost).catch(function (e) {
+            res.send(e)
+        })
+    })
+}
