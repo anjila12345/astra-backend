@@ -7,6 +7,7 @@ const user2Router = require('./router/users');
 const comment = require('./router/comment');
 const post = require('./router/postRouter');
 const agent = require('./router/agent');
+const wishlist = require('./router/whishlist');
 
 
 const path = require("path");
@@ -24,6 +25,7 @@ app.use(user2Router)
 app.use(agent)
 app.use(post)
 app.use(comment)
+app.use(wishlist)
 
 
 app.listen("3000");
