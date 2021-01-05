@@ -1,10 +1,16 @@
 const express = require('express')
 const app = express();
 require('./database/mongoose')
-const user2Router = require('./router/users')
 
-const post = require('./router/postRouter')
-const agent = require('./router/agent')
+
+const user2Router = require('./router/users');
+const comment = require('./router/comment');
+const post = require('./router/postRouter');
+const agent = require('./router/agent');
+const wishlist = require('./router/whishlist');
+const search = require('./router/search');
+
+
 const path = require("path");
 const bodyParser = require('body-parser');
 const publicdirectory = path.join(__dirname, 'public');
@@ -19,6 +25,9 @@ app.use(express.json())
 app.use(user2Router)
 app.use(agent)
 app.use(post)
+app.use(comment)
+app.use(wishlist)
+app.use(search)
 
 
 app.listen("3000");
