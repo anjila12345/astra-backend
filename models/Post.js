@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 const postSchema = new mongoose.Schema({
-
+    image:{
+        type: String,
+        required: false
+    },
     user_id: {
         type: mongoose.Schema.ObjectId,
         ref: 'agent',
@@ -16,8 +19,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-
-
+    favourite:[{
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        uniqueItems: true
+    }],
 })
 const post = mongoose.model('postdetail', postSchema)
 

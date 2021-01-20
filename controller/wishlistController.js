@@ -1,11 +1,11 @@
 const user = require("../models/User");
 
 exports.addToWishlist = (function (req, res) {
-    user.findByIdAndUpdate(req.params.postid, {$push:{wishlist: req.post.id}}, {new:true})
+    user.findByIdAndUpdate(req.body.user_id, {$push:{wishlist: req.body.post_id}}, {new:true})
     .then(function(){
-        res.send("add to wishlist")
+        res.send("added to wishlist")
     }).catch(function(e) {
-        res.send(e)
+        res.send("not done")
     })
 })
 
