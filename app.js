@@ -9,6 +9,7 @@ const post = require('./router/postRouter');
 const agent = require('./router/agent');
 const wishlist = require('./router/whishlist');
 const search = require('./router/search');
+const favourite = require('./router/favourite');
 
 
 const path = require("path");
@@ -28,6 +29,7 @@ app.use(post)
 app.use(comment)
 app.use(wishlist)
 app.use(search)
+app.use(favourite)
 
 
 app.listen("3000");

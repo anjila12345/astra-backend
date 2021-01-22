@@ -12,7 +12,7 @@ exports.addcomment =(req, res) => {
     
 }
 exports.getCommentByPostId =(req, res) => {
-    comment.find({post_id:req.params.id}).populate('user_id').populate('post_id').then(function(findAllcomment) {
+    comment.find({post_id:req.params.id}).populate('post_id').then(function(findAllcomment) {
         res.send(findAllcomment).catch(function(e){
             res.json(e)
         })

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 var Schema = mongoose.Schema;
 
@@ -23,7 +23,7 @@ const userSchema = new Schema({
     },
     image: {
         type: Object,
-        default: null
+        default: 'user.png'
     },
     password: {
         type: Object,

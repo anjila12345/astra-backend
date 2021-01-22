@@ -40,6 +40,7 @@ exports.login = async (req, res) => {
 exports.logincheck = async (req, res) => {
     res.send(req.user)
     console.log(req.user)
+    console.log('logged In')
 }
 
 // //get ko lagi code

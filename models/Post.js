@@ -20,8 +20,8 @@ const postSchema = new mongoose.Schema({
         require: true
     },
     favourite:[{
-        type: Schema.Types.ObjectId,
-        ref: 'User',
+        type: mongoose.Schema.ObjectId,
+        ref: 'users',
         uniqueItems: true
     }],
 })
