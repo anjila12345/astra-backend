@@ -4,6 +4,7 @@ const wishlistController = require('../controller/wishlistController')
 
 router.put("/addToWishlist", wishlistController.addToWishlist);
 router.put("/deleteFromWishlist", wishlistController.deleteFromWishlist);
+router.get("/getAllWishlist",wishlistController.getAllWishlist);
 
 
 
