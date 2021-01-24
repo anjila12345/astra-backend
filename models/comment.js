@@ -13,8 +13,7 @@ const comment = mongoose.model('comment', {
     },
     post_id: {
         type: mongoose.Schema.ObjectId,
-        ref: 'postdetail',
-        trim: true
+        ref: 'postdetail'
     }
 
 })
