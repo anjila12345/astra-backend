@@ -2,24 +2,14 @@ const express = require("express")
 const auth = require('../middleware/auth');
 const router = express.Router()
 
-const {
-    create,
-    findApplicantsByPostId,
-} = require('../controller/applicationsController');
+const applicationsController = require("../controller/applicationsController")
 
 
+router.post("/postapplication", applicationsController.addapplication)
 
-// router.post('/apply/:post_id', create)
-
-// router.get('/applicants/:post_id', findApplicantsByPostId)
-
-// router.put('/updatestatus/:post_id/:user_id', updateApplicants)
-
-/////// which is right? ///////
-
-router.post('/applications/:id', create)
-
-router.get('/getapplicationsbypostid/:id', findApplicantsByPostId)
+router.get('/getapplicationsbypostid/:id', applicationsController.findApplicantsByPostId)
+router.get("/findallapplicants", applicationsController.findapplicants)
+router.delete("/deleteapplicants/:id", applicationsController.deleteapplicants)
 
 
 module.exports = router
