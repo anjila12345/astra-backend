@@ -15,7 +15,8 @@ const applicationsSchema = new mongoose.Schema({
     },
     citizenshipnumber: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     phone: {
         type: String,
@@ -23,36 +24,44 @@ const applicationsSchema = new mongoose.Schema({
     },
     univerisity: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     studylevel: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     year: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     address: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
 
     workplace: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     descp: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     start: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     },
     end: {
         type: String,
-        required: true,
+        require: true,
+        trim: true
     }
 
 })
