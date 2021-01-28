@@ -11,6 +11,7 @@ const wishlist = require('./router/whishlist');
 const search = require('./router/search');
 const favourite = require('./router/favourite');
 const applicants = require('./router/Applications');
+const profile = require('./router/profile');
 
 
 const path = require("path");
@@ -32,6 +33,7 @@ app.use(wishlist)
 app.use(search)
 app.use(favourite)
 app.use(applicants)
+app.use(profile)
 
 app.listen("3000");
 console.log('Server runs at http://localhost:' + 3000);
