@@ -10,7 +10,7 @@ const applicationsSchema = new mongoose.Schema({
     },
     user_id: {
         type: mongoose.Schema.ObjectId,
-        ref: 'user',
+        ref: 'users',
         trim: true,
     },
     citizenshipnumber: {
@@ -22,7 +22,7 @@ const applicationsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    univerisity: {
+    university: {
         type: String,
         require: true,
         trim: true

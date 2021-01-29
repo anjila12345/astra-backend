@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const postSchema = new mongoose.Schema({
-    image:{
+    image: {
         type: String,
         required: false
     },
@@ -19,7 +19,19 @@ const postSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    favourite:[{
+    experience: {
+        type: String,
+        require: true
+    },
+    education: {
+        type: String,
+        require: true
+    },
+    salary: {
+        type: String,
+        require: true
+    },
+    favourite: [{
         type: mongoose.Schema.ObjectId,
         ref: 'users',
         uniqueItems: true
