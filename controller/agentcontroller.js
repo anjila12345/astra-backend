@@ -114,3 +114,11 @@ exports.admin = function (req, res) {
         res.send("please authenticate..");
     }
 }
+
+exports.getuserbyid = (req, res) => {
+    Users.find({ user_id: req.params.id }).populate('user_id').then(function (findAlluser) {
+        res.send(findAlluser).catch(function (e) {
+            res.json(e)
+        })
+    })
+}

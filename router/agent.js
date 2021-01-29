@@ -16,5 +16,6 @@ router.put("/agent/updates/:id", [upload], AgentController.update)
 router.post("/agent/logout", auth, AgentController.logout)
 router.put("/upload/:id", [upload], AgentController.updates)
 router.get("/admin_dashboard", auth, AgentController.admin)
+router.get("/getuser/:id", AgentController.getuserbyid)
 
 module.exports = router
