@@ -20,13 +20,14 @@ exports.findApplicantsByPostId = async (req, res) => {
 }
 
 
+
 exports.findapplicants = async (req, res) => {
-    console.log(req.params._id)
-    Applications.find().populate('user_id').populate('post_id').then(function (findAllApplicants) {
-        res.send(findAllApplicants).catch(function (e) {
-            res.send(e)
-        })
-    })
+    Applications.find()
+        .populate("user_id")
+        .then((findAllpost) => {
+            res.json(findAllpost)
+            console.log(findAllpost)
+        }).catch((err) => res.send(err))
 }
 
 exports.deleteapplicants = (function (req, res) {
