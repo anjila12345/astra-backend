@@ -5,5 +5,8 @@ const router = express.Router()
 const profilecontroller = require("../controller/profilecontroller")
 
 router.get("/myprofile", profilecontroller.myprofile);
-router.get("/userprofile/:id", profilecontroller.userprofile);
-router.get("/userpost/:id", profilecontroller.userpost);
+router.get("/userprofile/:userid", profilecontroller.userprofile);
+router.get("/userpost/:userid", profilecontroller.userpost);
+
+
+module.exports = router
