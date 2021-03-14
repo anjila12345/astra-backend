@@ -22,7 +22,7 @@ const userSchema = new Schema({
     },
     image: {
         type: Object,
-        default: null
+        default: 'user.png'
     },
     password: {
         type: Object,
